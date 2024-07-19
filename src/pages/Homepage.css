@@ -1,0 +1,54 @@
+.homepage {
+    height: 400px;
+    width: 100%;
+}
+
+.home-container {
+    padding: 0;
+    margin-top: 0px;
+}
+
+.intro-section {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.image-container-home {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+.image-container-home img {
+    margin-left: 10%;
+    transition: margin-left 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.image-container-home img:hover {
+    transform: scale(1.1);
+}
+
+.img-fluid-home {
+    max-width: 100%;
+    height: auto;
+}
+
+.title-hero {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    margin-left: 5%;
+}
+
+.sub-title {
+    color: #484848;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5%;
+}

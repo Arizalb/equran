@@ -1,0 +1,12 @@
+/* SuratList.css */
+.surat-item {
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.surat-item:hover {
+    background-color: #f0f0f0;
+    /* Warna latar saat di-hover */
+    transform: translateY(-5px);
+    /* Efek mengangkat sedikit */
+}

@@ -1,0 +1,33 @@
+.nextsurat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nextsurat p {
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    width: 125px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.beforesurat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.beforesurat p {
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    width: 125px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Homepage from "./pages/Homepage";
+import SuratList from "./pages/SuratList";
+import SuratDetail from "./pages/SuratDetail";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <div className="App container">
+          <header className="App-header">
+            <h1>Al-Quran Web App</h1>
+          </header>
+          <main>
+            <div className="container">
+              <Routes>
+                <Route path="/" exact element={<Homepage />} />
+                <Route path="/surat" exact element={<SuratList />} />
+                <Route path="/surat/:nomor" element={<SuratDetail />} />
+              </Routes>
+            </div>
+          </main>
+          <footer>
+            <div className="card-footer text-body-secondary">
+              <p>Al-Quran Web App | Baehaqee</p>
+            </div>
+          </footer>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
