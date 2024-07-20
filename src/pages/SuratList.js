@@ -28,18 +28,29 @@ const SuratList = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="my-4">Daftar Surat</h1>
+    <div className="container my-5">
+      <h1 className="mb-4">Daftar Surat</h1>
       <div className="row">
         {Array.isArray(surat) && surat.length > 0 ? (
           surat.map((item) => (
             <div
-              className="col-12 col-md-6 col-lg-4 mb-3"
               key={item.nomor}
+              className="col-md-6 col-lg-4 mb-4"
               onClick={() => handleSuratClick(item.nomor)}
             >
-              <div className="list-group-item list-group-item-action surat-item">
-                {item.namaLatin}
+              <div className="card h-100">
+                <div className="card-body">
+                  <h5 className="card-title">
+                    {item.namaLatin} ({item.nama})
+                  </h5>
+                  <p className="card-text">
+                    <strong>Ayat:</strong> {item.jumlahAyat}
+                    <br />
+                    <strong>Tempat Turun:</strong> {item.tempatTurun}
+                    <br />
+                    <strong>Arti:</strong> {item.arti}
+                  </p>
+                </div>
               </div>
             </div>
           ))
