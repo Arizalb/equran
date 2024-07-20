@@ -1,9 +1,9 @@
 // src/components/Homepage.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Homepage.css";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import quranImage from "./assets/alquran.png";
+import "./Homepage.css";
+import quranImage from "./assets/alquran.png"; // Pastikan path gambar sesuai dengan lokasi file
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -25,8 +25,8 @@ const Homepage = () => {
           </Col>
           <Col md={6} className="image-container-home">
             <img
-              src={quranImage} // Ganti dengan path gambar yang sesuai
-              alt="Notic Illustration"
+              src={quranImage}
+              alt="Quran Illustration"
               className="img-fluid-home"
             />
           </Col>

@@ -1,15 +1,35 @@
 /* src/App.css */
 .App {
-  text-align: center;
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
+.main-content {
+  flex-grow: 1;
   padding: 20px;
-  color: white;
+  margin-left: 250px;
+  /* Adjust based on sidebar width */
 }
 
-main {
-  padding: 20px;
-  width: 100%;
+.custom-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  /* Adjust width as needed */
+  background-color: #f8f9fa;
+  /* Background color */
+  z-index: 1000;
+  /* Ensure it stays above other content */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .custom-sidebar {
+    width: 200px;
+    /* Adjust for smaller screens */
+  }
 }

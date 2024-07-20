@@ -52,3 +52,41 @@
     font-size: 20px;
     margin-left: 5%;
 }
+
+/* src/components/Homepage.css */
+.home-container {
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.intro-section {
+    padding: 50px 0;
+}
+
+.text-container-home {
+    text-align: left;
+}
+
+.title-hero {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.btn-dark {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.image-container-home {
+    text-align: center;
+}
+
+.img-fluid-home {
+    max-width: 100%;
+    height: auto;
+}

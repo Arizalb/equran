@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import "./SuratDetail.css";
+import { Container } from "react-bootstrap";
 
 const SuratDetail = () => {
   const { nomor } = useParams();
@@ -149,7 +150,12 @@ const SuratDetail = () => {
       </div>
 
       {showMushaf ? renderMushaf() : renderLengkap()}
-
+      <Container>
+        {/* Kode lainnya */}
+        <Link to={`/tafsir/${nomor}`} className="btn btn-light mt-3">
+          Lihat Tafsir
+        </Link>
+      </Container>
       <h2 className="my-3 py-3">Audio Full</h2>
       <div className="d-flex flex-wrap">
         {Object.entries(surat.audioFull).map(([key, value]) => (
