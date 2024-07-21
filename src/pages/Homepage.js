@@ -19,7 +19,7 @@ const Homepage = () => {
           <Col md={6} className="text-container-home">
             <h1 className="title-hero fw-bold">e-Qur'an</h1>
             <p className="sub-title">Baca Al-Qur'an dimanapun dan kapanpun</p>
-            <Button className="btn btn-dark" onClick={navigateToSuratList}>
+            <Button className="btn btn-dark mx-4" onClick={navigateToSuratList}>
               Mulai Baca
             </Button>
           </Col>

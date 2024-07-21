@@ -2,44 +2,40 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Sidebar from "./pages/Sidebar";
+import CustomNavbar from "./pages/CustomNavbar";
+import Footer from "./pages/Footer";
 import Homepage from "./pages/Homepage";
 import SuratList from "./pages/SuratList";
 import SuratDetail from "./pages/SuratDetail";
-import Tafsir from "./pages/Tafsir";
-import AsmaulHusnaList from "./pages/AsmaulHusnaList";
+import AsmaulHusna from "./pages/AsmaulHusnaList";
+// import Tahlil from "./pages/Tahlil";
+// import FAQ from "./pages/FAQ";
+// import Calendar from "./pages/Calendar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
-import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <div className="App d-flex">
-          <Sidebar />
-          <div className="main-content flex-grow-1">
-            <header className="App-header">
-              <h1>Al-Quran Web App</h1>
-            </header>
-            <main className="container mt-4">
-              <Routes>
-                <Route path="/" exact element={<Homepage />} />
-                <Route path="/surat" exact element={<SuratList />} />
-                <Route path="/surat/:nomor" element={<SuratDetail />} />
-                <Route path="/tafsir/:nomor" element={<Tafsir />} />
-                <Route path="/asma" element={<AsmaulHusnaList />} />
-              </Routes>
-            </main>
-            <footer>
-              <div className="card-footer text-body-secondary text-center mt-4">
-                <p>Al-Quran Web App | Baehaqee</p>
-              </div>
-            </footer>
+    <Router>
+      <div className="">
+        <div className="content">
+          <div className="">
+            <CustomNavbar />
+          </div>
+          <Routes>
+            <Route path="/" exact element={<Homepage />} />
+            <Route path="/surat" exact element={<SuratList />} />
+            <Route path="/surat/:nomor" element={<SuratDetail />} />
+            <Route path="/asma" element={<AsmaulHusna />} />
+            {/* <Route path="/tahlil" element={<Tahlil />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/calendar" element={<Calendar />} /> */}
+          </Routes>
+          <div>
+            <Footer />
           </div>
         </div>
-      </Router>
-    </ThemeProvider>
+      </div>
+    </Router>
   );
 }
 

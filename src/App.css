@@ -10,17 +10,8 @@
   /* Adjust based on sidebar width */
 }
 
-.custom-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 250px;
-  /* Adjust width as needed */
-  background-color: #f8f9fa;
-  /* Background color */
-  z-index: 1000;
-  /* Ensure it stays above other content */
+.content {
+  padding-top: 50px;
 }
 
 @media (max-width: 768px) {

@@ -111,7 +111,7 @@ const SuratDetail = () => {
       <div className="d-flex justify-content-between align-items-center my-4">
         {surat.suratSebelumnya && (
           <button
-            className="btn btn-secondary d-flex align-items-center"
+            className="btn btn-secondary btn-sm d-flex align-items-center custom-btn"
             onClick={() => handleNavigate(surat.suratSebelumnya.nomor)}
           >
             <i className="bi bi-arrow-bar-left"></i>
@@ -125,7 +125,7 @@ const SuratDetail = () => {
         </h1>
         {surat.suratSelanjutnya && (
           <button
-            className="btn btn-dark d-flex align-items-center"
+            className="btn btn-dark btn-sm d-flex align-items-center custom-btn"
             onClick={() => handleNavigate(surat.suratSelanjutnya.nomor)}
           >
             <span className="me-2">
