@@ -107,7 +107,7 @@ const SuratDetail = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container py-3 my-3">
       <div className="d-flex justify-content-between align-items-center my-4">
         {surat.suratSebelumnya && (
           <button
@@ -152,7 +152,7 @@ const SuratDetail = () => {
       {showMushaf ? renderMushaf() : renderLengkap()}
       <Container>
         {/* Kode lainnya */}
-        <Link to={`/tafsir/${nomor}`} className="btn btn-light mt-3">
+        <Link to={`/tafsir/${nomor}`} className="btn btn-dark mt-3">
           Lihat Tafsir
         </Link>
       </Container>
