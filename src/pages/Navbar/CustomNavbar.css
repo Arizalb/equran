@@ -70,3 +70,35 @@
     background-color: #343a40;
     /* Sesuaikan dengan warna navbar Anda */
 }
+
+.offcanvas-dark .btn-close {
+    filter: invert(1);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.icon-text-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-text-container svg {
+    margin-right: 8px;
+}
+
+.dropdown-menu-dark .dropdown-item {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu-dark .dropdown-item svg {
+    margin-right: 8px;
+}
+
+.collapse-background {
+    background-color: #2a2d30;
+    /* Sesuaikan dengan warna yang diinginkan */
+}

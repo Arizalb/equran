@@ -1,0 +1,11 @@
+/* src/pages/AyatKursi.css */
+.ayat-kursi-container {
+    padding: 20px;
+}
+
+.arabic {
+    font-size: 1.5em;
+    color: #000;
+    direction: rtl;
+    text-align: right;
+}

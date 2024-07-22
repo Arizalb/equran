@@ -2,15 +2,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import CustomNavbar from "./pages/CustomNavbar";
+import CustomNavbar from "./pages/Navbar/CustomNavbar";
 import Footer from "./pages/Footer";
-import Homepage from "./pages/Homepage";
-import SuratList from "./pages/SuratList";
-import SuratDetail from "./pages/SuratDetail";
-import AsmaulHusna from "./pages/AsmaulHusnaList";
-// import Tahlil from "./pages/Tahlil";
-// import FAQ from "./pages/FAQ";
-// import Calendar from "./pages/Calendar";
+import Homepage from "./pages/Homepage/Homepage";
+import SuratList from "./pages/SuratList/SuratList";
+import SuratDetail from "./pages/SuratDetail/SuratDetail";
+import AsmaulHusna from "./pages/AsmaulHusna/AsmaulHusnaList";
+import Tahlil from "./pages/Tahlil/Tahlil";
+import DoaHarian from "./pages/DoaHarian/DoaHarian";
+import AyatKursi from "./pages/AyatKursi/AyatKursi";
+import Calendar from "./pages/Kalender";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -26,9 +27,10 @@ function App() {
             <Route path="/surat" exact element={<SuratList />} />
             <Route path="/surat/:nomor" element={<SuratDetail />} />
             <Route path="/asma" element={<AsmaulHusna />} />
-            {/* <Route path="/tahlil" element={<Tahlil />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/calendar" element={<Calendar />} /> */}
+            <Route path="/tahlil" element={<Tahlil />} />
+            <Route path="/doa" element={<DoaHarian />} />
+            <Route path="/ayat-kursi" element={<AyatKursi />} />
+            <Route path="/calendar" element={<Calendar />} />
           </Routes>
           <div>
             <Footer />

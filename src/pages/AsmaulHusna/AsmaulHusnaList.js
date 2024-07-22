@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Placeholder } from "react-bootstrap";
 import "./AsmaulHusnaList.css";
 
 const AsmaulHusnaList = () => {
   const [asmaulHusna, setAsmaulHusna] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -12,12 +14,15 @@ const AsmaulHusnaList = () => {
         console.log("Data yang diterima dari API:", response.data);
         if (response.data && response.data.data) {
           setAsmaulHusna(response.data.data);
+          setLoading(false);
         } else {
           console.error("Format data tidak sesuai.");
+          setLoading(false);
         }
       })
       .catch((error) => {
         console.error("Ada kesalahan dalam mengambil data:", error);
+        setLoading(false);
       });
   }, []);
 
@@ -25,7 +30,20 @@ const AsmaulHusnaList = () => {
     <div className="container my-5">
       <h1 className="mb-4">Asmaul Husna</h1>
       <div className="row">
-        {Array.isArray(asmaulHusna) && asmaulHusna.length > 0 ? (
+        {loading ? (
+          // Menampilkan loading placeholder saat data masih dimuat
+          Array.from({ length: 6 }).map((_, index) => (
+            <div key={index} className="col-md-6 col-lg-4 mb-4">
+              <div className="card h-100">
+                <Placeholder animation="glow">
+                  <Placeholder xs={12} className="mb-2" />
+                  <Placeholder xs={8} className="mb-2" />
+                  <Placeholder xs={6} />
+                </Placeholder>
+              </div>
+            </div>
+          ))
+        ) : Array.isArray(asmaulHusna) && asmaulHusna.length > 0 ? (
           asmaulHusna.map((item) => (
             <div key={item.id} className="col-md-6 col-lg-4 mb-4">
               <div className="card h-100">

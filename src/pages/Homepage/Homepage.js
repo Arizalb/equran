@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./Homepage.css";
-import quranImage from "./assets/alquran.png"; // Pastikan path gambar sesuai dengan lokasi file
+import quranImage from "../assets/alquran.png"; // Pastikan path gambar sesuai dengan lokasi file
 
 const Homepage = () => {
   const navigate = useNavigate();

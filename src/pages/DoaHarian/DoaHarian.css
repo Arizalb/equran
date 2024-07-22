@@ -1,0 +1,16 @@
+/* src/pages/DoaHarian.css */
+.doa-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.doa-item h4 {
+    margin-bottom: 10px;
+}
+
+.doa-item .arabic {
+    font-size: 1.25rem;
+    text-align: right;
+    direction: rtl;
+}

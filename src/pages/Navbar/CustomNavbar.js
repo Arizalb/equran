@@ -1,19 +1,27 @@
 // src/components/CustomNavbar.js
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Navbar, Nav, Container, Button, Offcanvas } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  Container,
+  Button,
+  Offcanvas,
+  Collapse,
+} from "react-bootstrap";
 import {
   FaBars,
   FaHome,
   FaBook,
   FaPray,
-  FaInfoCircle,
+  FaHands,
   FaCalendarAlt,
 } from "react-icons/fa";
 import "./CustomNavbar.css";
 
 function CustomNavbar() {
   const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
   const location = useLocation();
 
   const handleClose = () => setShow(false);
@@ -52,25 +60,52 @@ function CustomNavbar() {
         </div>
       </Nav.Link>
       <Nav.Link
-        as={Link}
-        to="/tahlil"
-        className={`nav-link ${
-          location.pathname === "/tahlil" ? "active" : ""
-        }`}
+        onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+        className="nav-link"
       >
         <div className="icon-text-container">
           <FaBook />
-          <span>Tahlil</span>
+          <span>Tahlil dan Ayat Kursi</span>
         </div>
       </Nav.Link>
+      <Collapse in={open}>
+        <div id="example-collapse-text" className="collapse-background">
+          <Nav.Link
+            as={Link}
+            to="/tahlil"
+            className={`nav-link ${
+              location.pathname === "/tahlil" ? "active" : ""
+            }`}
+          >
+            <div className="icon-text-container">
+              <FaBook />
+              <span>Tahlil</span>
+            </div>
+          </Nav.Link>
+          <Nav.Link
+            as={Link}
+            to="/ayat-kursi"
+            className={`nav-link ${
+              location.pathname === "/ayat-kursi" ? "active" : ""
+            }`}
+          >
+            <div className="icon-text-container">
+              <FaBook />
+              <span>Ayat Kursi</span>
+            </div>
+          </Nav.Link>
+        </div>
+      </Collapse>
       <Nav.Link
         as={Link}
-        to="/faq"
-        className={`nav-link ${location.pathname === "/faq" ? "active" : ""}`}
+        to="/doa"
+        className={`nav-link ${location.pathname === "/doa" ? "active" : ""}`}
       >
         <div className="icon-text-container">
-          <FaInfoCircle />
-          <span>FAQ</span>
+          <FaHands />
+          <span>Doa Harian</span>
         </div>
       </Nav.Link>
       <Nav.Link

@@ -1,0 +1,16 @@
+/* src/pages/Tahlil.css */
+.tahlil-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.tahlil-item h4 {
+    margin-bottom: 10px;
+}
+
+.tahlil-item .arabic {
+    font-size: 1.25rem;
+    text-align: right;
+    direction: rtl;
+}
