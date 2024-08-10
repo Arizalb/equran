@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="col-md-4">
             <h5>WhatsApp</h5>
             <p
-              onClick={() => handleNavigation("https://wa.me/6285649894084")}
+              onClick={() => handleNavigation("https://wa.me/")}
               className="hover-link"
             >
               Chat with me on WhatsApp
