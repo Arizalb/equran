@@ -132,9 +132,9 @@ function CustomNavbar() {
         className="mb-3 fixed-navbar"
       >
         <Container fluid>
-          <Navbar.Brand>
+          <Navbar.Brand className="d-flex flex-column align-items-start px-2 mx-2">
             <h3 className="fw-bold py-0 my-0">e-Qur'an</h3>
-            <p className="fs-6 py-0 my-0 text-warning fw-light font-monospace text-center">
+            <p className="fs-6 py-0 my-0 text-warning fw-light font-monospace text-start">
               by rzlbaihaqi
             </p>
           </Navbar.Brand>

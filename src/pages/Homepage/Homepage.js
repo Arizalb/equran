@@ -16,7 +16,7 @@ const Homepage = () => {
     <Container fluid className="home-container">
       <Container className="intro-section">
         <Row className="align-items-center">
-          <Col md={6} className="text-container-home">
+          <Col md={6} className="text-container-home py-4 my-4">
             <h1 className="title-hero fw-bold">e-Qur'an</h1>
             <p className="sub-title">Baca Al-Qur'an dimanapun dan kapanpun</p>
             <Button className="btn btn-dark mx-4" onClick={navigateToSuratList}>
